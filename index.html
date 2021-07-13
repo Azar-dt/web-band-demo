@@ -125,7 +125,9 @@
                 
             </div>
             <!-- end content product -->
-
+            <div class="buyModal">
+                
+            </div>
             <!-- begin contact -->
             <div class="contact" id="contact" >
                 <div class="content-section">
@@ -176,17 +178,17 @@
             </div>
             <!-- end contact -->
             <div class="image-cover">
-                <img src="https://cdn.wallpapersafari.com/69/1/vb6DJF.jpg" alt="">
+                <img class="slide" src="https://cdn.wallpapersafari.com/69/1/vb6DJF.jpg" alt="">
+                <img class="slide" src="https://i.pinimg.com/originals/7d/ca/22/7dca22d2caa95d471bd5cd9bc2807913.jpg" alt="">
+                <img class="slide" src="https://i.pinimg.com/originals/8b/cf/31/8bcf315729dad07eeef0d426e258de9a.jpg" alt="">
+
             </div>
         </div>
 
         <div id="footer">
             <div class="social-list">
-                <a href=""><i class="ti-facebook"></i></a>
-                <a href=""><i class="ti-instagram"></i></a>
-                <a href=""><i class="ti-google"></i></a>
-                <a href=""><i class="ti-twitter"></i></a>
-                <a href=""><i class="ti-github"></i></a>
+                <a href="https://www.facebook.com/ducthangtranhau0102/" target="blank"><i class="ti-facebook"></i></a>
+                <a href="https://github.com/Azar-dt" target="blank"><i class="ti-github"></i></a>
                 
             </div>
             <p class="text-center">
@@ -216,6 +218,24 @@
                 header.style.height = null; 
             }
         }
+
+        // change picture 
+        let myIndex =0; 
+        let time = 3000; 
+        changeImage(); 
+        function changeImage() { 
+            
+            let x = document.getElementsByClassName('slide'); 
+            console.log(x.length);
+            for(let i=0;i<x.length;i++) { 
+                x[i].style.display = 'none'; 
+            }
+            myIndex++; 
+            if(myIndex>x.length) myIndex=1; 
+            x[myIndex-1].style.display = 'block'; 
+            setTimeout("changeImage()",time); 
+        }
+        
     </script>
 </body>
 </html>
