@@ -1,0 +1,389 @@
+/* Reset css */
+* { 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+html { 
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* common */
+
+.clear { 
+    clear: both;
+}
+
+.text-white { 
+    color: white !important;
+}
+
+.text-center { 
+    text-align: center !important;
+}
+
+.pull-right { 
+    float: right;
+}
+
+.btn { 
+    padding: 8px;
+    background-color: black;
+    font-size: 15px;
+    color: white;
+    border: none;
+    -webkit-appearance: none;
+}
+
+.btn:hover { 
+    background-color: #ccc;
+    color: black;
+}
+
+.row { 
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after { 
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col { 
+    float: left; 
+    padding: 0 8px 10px 8px;
+}
+
+.col-full { 
+    width: 100%;
+}
+
+.col-3 {
+    width: calc(100%/3);
+}
+
+.col-2 { 
+    width: 50%;
+}
+
+/* main */
+#main{ 
+
+}
+#header{ 
+    height: 46px;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#nav, .subnav { 
+    list-style-type: none;
+}
+#nav { 
+   display: inline-block;
+}
+
+#nav li { 
+    display: inline-block;
+    position: relative;
+}
+
+#nav li:hover .subnav{ 
+    display: block;
+}
+
+#nav > li > a{ 
+    text-transform: uppercase;
+    color: white;
+}
+#nav li a { 
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+   
+}
+
+#nav > li:hover >a{ 
+    color: black;
+    background-color: gray;
+}
+
+#nav .subnav { 
+    display: none;
+    min-width: 160px; 
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    top : 100%; 
+    left: 0;
+}
+
+#nav .subnav li { 
+    width: 100%;
+}
+
+#nav .subnav a { 
+    padding: 0 12px;
+    color: black;
+    line-height: 36px;
+}
+
+#nav .subnav li:hover a{ 
+    color: black;
+    background-color: gray;
+}
+
+#nav .nav-arrow-down { 
+    font-size: 10px;
+}
+
+#header .mobile-menu-btn { 
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
+#header .search-btn { 
+    padding: 9.5px 18px;
+    float: right;
+}
+
+#header .mobile-menu-btn:hover { 
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon { 
+    color: black;
+}
+
+#header .search-btn:hover { 
+    cursor: pointer;
+    background-color: rgb(236, 83, 83);
+}
+#header .menu-icon,
+#header .search-icon { 
+    font-size: 25px;
+    color: white;
+}
+#slider{ 
+    position: relative;
+    /* margin-top: 46px; */
+    padding-top: 50%;
+    background-image : url(https://c4.wallpaperflare.com/wallpaper/275/606/352/anime-berserk-guts-berserk-wallpaper-preview.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: top center;
+}
+
+#slider .text-content { 
+    position: absolute; 
+    color: white; 
+    bottom: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    text-shadow: 0 0 1px #000;
+}
+
+#slider h2 { 
+    font-size: 24px;
+    font-weight: 500;
+    margin: 10px;
+}
+
+#slider .infor { 
+    font-size: 15px;
+}
+
+#content{ 
+    position: relative;
+}
+
+#content .content-section { 
+    width:800px;
+    max-width: 100%;
+    padding: 64px 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .content-section .section-heading { 
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-size: 30px;
+    font-weight: 450;
+    margin: 10px;
+    letter-spacing: 5px;
+}
+
+#content .content-section .section-subheading { 
+    text-align: center;
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.6;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#content .review { 
+    font-size: 15px;
+    margin-top: 15px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+#content .member {
+    padding: 32px 0;
+}
+
+#content .member-name { 
+    margin-top: 40px;
+}
+
+#content .member-img { 
+    margin-top: 15px;
+    border-radius: 4px;
+    height: 200px;
+}
+
+#content .content-product { 
+    background-color: black;
+}
+
+#content ul { 
+    background-color: white;
+}
+
+#content li { 
+    /* display: inline-block; */
+    padding: 8px 16px;
+    font-size: 15px;
+    border-bottom: solid 2px;
+    place-content: center;
+    color: rgb(143, 140, 140);
+    list-style-type: none;
+    
+}
+
+#content .content-product .sold-out { 
+    display: inline-block;
+    background-color: rgb(252, 78, 78);
+    color: white;
+    padding: 0 8px;
+    margin-left: 16px;
+}
+
+#content .content-product .remain { 
+    background-color: black;
+    width: 24px;
+    height: 24px;
+    float: right;
+    /* can giua  */
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+    /*  */
+    border-radius: 50%;
+}
+
+
+
+#content .product-img { 
+    width: 100%;
+    display: block;
+}
+
+#content .product .product-img:hover { 
+    opacity: 0.6;
+}
+
+#content .product-body { 
+    background-color: white;
+    padding: 16px;
+    text-align: center;
+}
+
+#content .product-name { 
+    padding: 16px 0;
+}
+
+#content .contact li { 
+    list-style-type: none;
+    border: none;
+}
+
+#content .contact-content { 
+    padding-top: 32px;
+}
+
+#content .contact-infor-item { 
+    font-size: 18px;
+}
+
+#content .contact-form { 
+    font-size: 15px;
+    
+}
+
+#content .contact i { 
+   height: 30px;
+    width: 30px;
+    display: inline-block;
+}
+
+.contact .form-control { 
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact .form-send{ 
+    background-color: #000;
+    color: #fff;
+    padding: 9px 18px; 
+    border: 1px solid #000;
+    float: right;
+}
+
+.image-cover img { 
+    width: 100%;
+}
+
+#footer{ 
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .social-list { 
+    font-size: 24px;
+  
+}
+
+#footer .social-list a { 
+    text-decoration: none;
+    color: black;
+    opacity: 0.8;
+}
+
+#footer .social-list a:hover { 
+    opacity: 0.6;
+}
+
+#footer p { 
+    font-size: 15px;
+    margin: 15px 0;
+    line-height: 1.5;
+}
