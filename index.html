@@ -21,7 +21,7 @@
                 <li><a href="#content-product">Product</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li> 
-                    <a href="#">
+                    <a href="">
                         More
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
@@ -100,7 +100,7 @@
                             <div class="product-body">
 
                                 <h3 class="product-name">Delux version</h3>
-                                <button class="btn">Buy product</button>
+                                <button class="btn" onclick="document.getElementById('buyModal').style.display='block'">Buy product</button>
                             </div>
                         </div>
                         <div class="col col-3 s-col-full product-item">
@@ -108,14 +108,14 @@
                             <div class="product-body">
 
                                 <h3 class="product-name">Delux version</h3>
-                                <button class="btn">Buy product</button>
+                                <button class="btn"  onclick="document.getElementById('buyModal').style.display='block'">Buy product</button>
                             </div>
                         </div>
                         <div class="col col-3 s-col-full product-item">
                             <img class="product-img" src="https://www.sideshow.com/storage/product-images/908210/berserk-deluxe-volume-2_berserk_square.jpg" alt="">
                             <div class="product-body">
                                 <h3 class="product-name">Delux version</h3>
-                                <button class="btn">Buy product</button>
+                                <button class="btn" onclick="document.getElementById('buyModal').style.display='block'">Buy product</button>
                             </div>
                             
                         </div>
@@ -125,8 +125,44 @@
                 
             </div>
             <!-- end content product -->
-            <div class="buyModal">
-                
+            <div id="buyModal" class="buy-box">
+                <div class="buy-box-content">
+
+                    <header class="buy-box-head text-center">
+                        <span onclick="document.getElementById('buyModal').style.display='none'" class="buy-box-close-btn pull-right">×</span>
+                        <p>
+                            <i class="ti-shopping-cart"></i>
+                            Books
+                        </p>
+                    </header>
+                    <div class="buy-box-infor">
+                        <form action="">
+                            <div class="contact-infor">
+                                <p>
+                                    <i class="ti-shopping-cart"></i>
+                                    Book, 15$ per book
+                                </p>
+                                <div>
+
+                                    <input type="number" required name="" placeholder="How many ?" id="" class="form-control">                              
+                                </div>
+                                        
+                            </div>
+                            <div class="contact-infor">
+                                <p>
+                                    <i class="ti-location-pin"></i>
+                                    Send to
+                                </p>                    
+                                <input type="text" required name="" placeholder="Location" id="" class="form-control">          
+                            </div>
+                            <div class="send-btn">
+
+                                <input type="submit" class="buy-btn" value="BUY">
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
             </div>
             <!-- begin contact -->
             <div class="contact" id="contact" >
@@ -157,7 +193,7 @@
                                         <input type="text" required name="" placeholder="Name" id="" class="form-control">
                                     </div>
                                     <div class="col col-2 s-col-full">
-                                        <input type="emial" required name="" placeholder="Email" id="" class="form-control">
+                                        <input type="email" required name="" placeholder="Email" id="" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -235,7 +271,13 @@
             x[myIndex-1].style.display = 'block'; 
             setTimeout("changeImage()",time); 
         }
-        
+        //
+        let modal = document.getElementById('buyModal');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>

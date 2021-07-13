@@ -35,7 +35,8 @@ html {
     border: none;
     -webkit-appearance: none;
 }
-
+#buyModal .buy-btn:hover,
+#buyModal .buy-box-close-btn:hover,
 .btn:hover { 
     background-color: #ccc;
     color: black;
@@ -214,9 +215,9 @@ html {
 #content .content-section { 
     width:800px;
     max-width: 100%;
-    padding: 64px 16px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
+    padding: 64px 16px;
 }
 
 #content .content-section .section-heading { 
@@ -320,6 +321,67 @@ html {
     padding: 16px 0;
 }
 
+#content .buy-box { 
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-top: 46px;
+    z-index: 3; 
+    position: fixed;
+    top: 46px; 
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#content .buy-box-content { 
+    width:600px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; 
+    box-shadow: 0px 0px 6px #000;
+}
+
+#buyModal .buy-box-close-btn { 
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    float:right; 
+    top: 0;
+}
+
+#content .buy-box i { 
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
+#content .buy-box-head { 
+    background-color: #009688;
+    color: white;
+    padding: 32px 16px;
+}
+
+#content .buy-box-infor { 
+    display: inline-block;
+    padding: 0 16px;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+#buyModal p { 
+    padding-top: 15px;
+    padding-left: 4px;
+}
+
+#buyModal .buy-btn { 
+    background-color: #009688;
+    color: white;
+    width: 100%;
+    padding: 16px;
+    margin: 16px 0;
+    border: none;
+    -webkit-appearance: none;
+}
 #content .contact li { 
     list-style-type: none;
     border: none;
@@ -342,6 +404,13 @@ html {
    height: 30px;
     width: 30px;
     display: inline-block;
+}
+
+#buyModal .form-control { 
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+
 }
 
 .contact .form-control { 
