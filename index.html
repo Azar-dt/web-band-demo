@@ -21,7 +21,7 @@
                 <li><a href="#content-product">Product</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li> 
-                    <a href="">
+                    <a href="#">
                         More
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
@@ -129,7 +129,7 @@
                 <div class="buy-box-content">
 
                     <header class="buy-box-head text-center">
-                        <span onclick="document.getElementById('buyModal').style.display='none'" class="buy-box-close-btn pull-right">×</span>
+                        <span onclick="document.getElementById('buyModal').style.display='none'" class="buy-box-close-btn">×</span>
                         <p>
                             <i class="ti-shopping-cart"></i>
                             Books
@@ -250,8 +250,14 @@
         let menuItems = document.querySelectorAll('#nav li a[href*="#"]'); 
         for(let i=0;i<menuItems.length;i++) { 
             let menuItem = menuItems[i]; 
-            menuItem.onclick = function() { 
-                header.style.height = null; 
+            menuItem.onclick = function(event) { 
+                console.log(menuItem.nextElementSibling); 
+                let isParentMenu = menuItem.nextElementSibling && menuItem.nextElementSibling.classList.contains('subnav'); 
+                if (isParentMenu) { 
+                    event.preventDefault(); 
+                } else { 
+                    header.style.height = null; 
+                }
             }
         }
 
@@ -262,7 +268,7 @@
         function changeImage() { 
             
             let x = document.getElementsByClassName('slide'); 
-            console.log(x.length);
+            
             for(let i=0;i<x.length;i++) { 
                 x[i].style.display = 'none'; 
             }

@@ -82,7 +82,7 @@ html {
     left: 0;
     right: 0;
     z-index: 1;
-    overflow: hidden;
+    
 }
 
 #nav, .subnav { 
@@ -365,7 +365,7 @@ html {
     padding: 0 16px;
     width: 100%;
     background-color: white;
-    border: 1px solid #ccc;
+   
 }
 
 #buyModal p { 

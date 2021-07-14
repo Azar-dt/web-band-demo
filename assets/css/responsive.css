@@ -10,6 +10,18 @@
 
 /* Mobile */
 @media (max-width: 46.1875em) { 
+    #header { 
+        overflow: hidden;
+    }
+
+    #header .search-btn { 
+        display: none;
+    }
+
+    #header .mobile-menu-btn { 
+        display: block;
+    }
+
     .s-col-full { 
         width: 100%;
     }
@@ -26,12 +38,15 @@
         display: inline-block;
     }
 
-    #header .search-btn { 
-        display: none;
+    #nav .subnav { 
+        position: initial;
+        background-color:#ccc;
+    
     }
-
-    #header .mobile-menu-btn { 
-        display: block;
+    #nav .subnav li { 
+        padding-left: 25px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 
     #content .member-name { 
@@ -43,6 +58,8 @@
     }
     
  
-
-  
+    #content .buy-box { 
+        padding: 45px 16px 0;
+    }
+    
 }
